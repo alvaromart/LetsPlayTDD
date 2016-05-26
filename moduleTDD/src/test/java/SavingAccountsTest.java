@@ -10,7 +10,7 @@ import static junit.framework.TestCase.fail;
 public class SavingAccountsTest {
 
     @Test
-    public void depositAndWithDrawal(){
+    public void depositAndWithdrawal(){
 
         SavingAccounts account = new SavingAccounts();
         account.deposit(100);
@@ -26,6 +26,12 @@ public class SavingAccountsTest {
         assertEquals(-75, account.balance());
     }
 
-
+    @Test
+    public void nextYear(){
+        SavingAccounts account = new SavingAccounts();
+        account.deposit(10000);
+        SavingAccounts nextYear = account.nextYear(10);
+        assertEquals(11000, nextYear.balance());
+    }
 
 }

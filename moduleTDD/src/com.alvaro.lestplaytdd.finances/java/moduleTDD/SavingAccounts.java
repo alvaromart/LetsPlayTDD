@@ -18,4 +18,11 @@ public class SavingAccounts {
     public void withdrawal(int amount) {
         balance -= amount;
     }
+
+    public SavingAccounts nextYear(int interestRate) {
+
+        SavingAccounts result = new SavingAccounts();
+        result.deposit((balance()+ (balance() * interestRate /100)));
+        return result;
+    }
 }
