@@ -15,14 +15,14 @@ public class SavingAccountsTest {
         SavingAccounts account = new SavingAccounts();
         account.deposit(100);
         assertEquals("after deposit", 100, account.balance());
-        account.withdraw(50);
+        account.withdrawal(50);
         assertEquals("after withdrawal", 50, account.balance());
     }
 
     @Test
     public void negativeBalanceIsJustFine(){
         SavingAccounts account = new SavingAccounts();
-        account.withdraw(75);
+        account.withdrawal(75);
         assertEquals(-75, account.balance());
     }
 
