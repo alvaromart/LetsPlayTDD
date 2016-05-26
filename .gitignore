@@ -1,2 +1,6 @@
 local.properties
 .idea/*
+initTDD.iml
+moduleTDD/src/main/resources/
+moduleTDD/target/
+out/
